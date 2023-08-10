@@ -9,7 +9,7 @@ on:
 
 jobs:
   docker:
-    # only publish docker image if the PR is from a MergeStat repo
+    # only publish docker image if the PR is from a DevZero repo
     if: github.repository_owner == 'devzero-examples'
     runs-on: ubuntu-latest
     permissions:
