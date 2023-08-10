@@ -13,7 +13,7 @@ VALUES
     EXTRACT(SECOND FROM age(github_pull_requests.merged_at::timestamp, github_pull_request_commits.committer_when::timestamp)) AS seconds
 FROM repos
 INNER JOIN github_pull_requests ON repos.id = github_pull_requests.repo_id
-INNER JOIN github_pull_request_commits ON github_pull_requests.number = github_pull_request_commits.pr_number
+INNER JOIN github_pull_request_commits ON github_pull_requests.number = github_pull_request_commits.pr_number AND repos.id = github_pull_request_commits.repo_id
 WHERE github_pull_requests.merged is TRUE;'
 ), 
 
