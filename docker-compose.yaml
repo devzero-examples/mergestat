@@ -26,7 +26,7 @@ services:
     # NOTE: to opt out of basic image pull tracking, comment out the current image
     # and uncomment the next line (which will pull from Docker Hub directly).
     # image: mergestat/worker:2.2.1-beta
-    image: images.mergestat.com/devinfraio/devzero-mergestat:sha-33abba2
+    image: devinfraio/devzero-mergestat:sha-33abba2
     privileged: true
     stop_grace_period: 10m
     restart: always
